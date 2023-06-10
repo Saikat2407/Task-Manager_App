@@ -112,11 +112,11 @@ class CreateNewTaskPage extends StatelessWidget {
                               children: <Widget>[
                                 Chip(
                                   label: Text("SPORT APP"),
-                                  backgroundColor: LightColors.kRed,
+                                  backgroundColor: Colors.orange,
                                   labelStyle: TextStyle(color: Colors.white),
                                 ),
                                 Chip(
-                                  label: Text("MEDICAL APP"),
+                                  label: Text("FITNESS APP"),
                                 ),
                                 Chip(
                                   label: Text("RENT APP"),
@@ -153,7 +153,7 @@ class CreateNewTaskPage extends StatelessWidget {
                     margin: EdgeInsets.fromLTRB(20, 10, 20, 20),
                     width: width - 40,
                     decoration: BoxDecoration(
-                      color: LightColors.kBlue,
+                      color: Colors.lightBlueAccent,
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ),
