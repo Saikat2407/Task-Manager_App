@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanager/theme/colors/light_colors.dart';
 import 'package:taskmanager/widgets/top_container.dart';
 import 'package:taskmanager/widgets/back_button.dart';
 import 'package:taskmanager/widgets/my_text_field.dart';

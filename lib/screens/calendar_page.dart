@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:taskmanager/dates_list.dart';
-import 'package:taskmanager/theme/colors/light_colors.dart';
 import 'package:taskmanager/widgets/calendar_dates.dart';
 import 'package:taskmanager/widgets/task_container.dart';
 import 'package:taskmanager/screens/create_new_task_page.dart';
