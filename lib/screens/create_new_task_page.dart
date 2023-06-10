@@ -19,6 +19,7 @@ class CreateNewTaskPage extends StatelessWidget {
             TopContainer(
               padding: EdgeInsets.fromLTRB(20, 20, 20, 40),
               width: width,
+              height: 0.0,
               child: Column(
                 children: <Widget>[
                   MyBackButton(),
@@ -40,7 +41,7 @@ class CreateNewTaskPage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          MyTextField(label: 'Title'),
+                          MyTextField(label: 'Title', icon: Icons.add_a_photo,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.end,
@@ -82,10 +83,12 @@ class CreateNewTaskPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 20),
-                      MyTextField(
-                        label: 'Description',
-                        minLines: 3,
-                        maxLines: 3,
+                      widget(
+                        child: MyTextField(
+                          label: 'Description',
+                          minLines: 3,
+                          maxLines: 3,
+                        ),
                       ),
                       SizedBox(height: 20),
                       Container(

@@ -153,7 +153,7 @@ class HomePage extends StatelessWidget {
                           SizedBox(height: 15.0),
                           TaskColumn(
                             icon: Icons.check_circle_outline,
-                            iconBackgroundColor: Colors.blue.shade400
+                            iconBackgroundColor: Colors.blue.shade400,
                             title: 'Done',
                             subtitle: '18 tasks now. 13 started',
                           ),

@@ -187,4 +187,6 @@ class CalendarPage extends StatelessWidget {
       ),
     );
   }
+
+  FlatButton({required Null Function() onPressed, required Center child}) {}
 }
