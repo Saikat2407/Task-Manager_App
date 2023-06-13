@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
                                   'Saikat Nayek',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
-                                    fontSize: 22.0,
+                                    fontSize: 25.0,
                                     color: Colors.blue.shade400,
                                     fontWeight: FontWeight.w800,
                                   ),
@@ -95,8 +95,8 @@ class HomePage extends StatelessWidget {
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                     fontSize: 16.0,
-                                    color: Colors.black45,
-                                    fontWeight: FontWeight.w400,
+                                    color: Colors.black87,
+                                    fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ),
