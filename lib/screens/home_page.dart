@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             TopContainer(
-              height: 200,
+              height: 230,
               width: width,
               padding: EdgeInsets.all(10.0),
               child: Expanded(
@@ -68,9 +68,9 @@ class HomePage extends StatelessWidget {
                             progressColor: Colors.redAccent.shade200,
                             backgroundColor: Colors.yellow.shade400,
                             center: CircleAvatar(
-                              backgroundColor: Colors.blue.shade400,
-                              radius: 35.0,
-                              backgroundImage: AssetImage(
+                              backgroundColor: Colors.blue.shade900,
+                              radius: 70.0,
+                              backgroundImage:const AssetImage(
                                 'assets/images/avatar.png',
                               ),
                             ),

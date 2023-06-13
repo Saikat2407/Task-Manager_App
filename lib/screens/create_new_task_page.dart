@@ -41,7 +41,7 @@ class CreateNewTaskPage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          MyTextField(label: 'Title', ),
+                          MyTextField(label: 'Title'),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.end,
@@ -168,6 +168,5 @@ class CreateNewTaskPage extends StatelessWidget {
     );
   }
 
-  widget({required MyTextField child}) {
-  }
+  widget({required MyTextField child}) {}
 }
