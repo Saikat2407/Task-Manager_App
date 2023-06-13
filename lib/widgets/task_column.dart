@@ -5,6 +5,7 @@ class TaskColumn extends StatelessWidget {
   final Color iconBackgroundColor;
   final String title;
   final String subtitle;
+
   TaskColumn({
     required this.icon,
     required this.iconBackgroundColor,
@@ -31,16 +32,17 @@ class TaskColumn extends StatelessWidget {
           children: <Widget>[
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
+                color: Colors.black,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w700,
               ),
             ),
             Text(
               subtitle,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 14.0,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                   color: Colors.black45),
             ),
           ],

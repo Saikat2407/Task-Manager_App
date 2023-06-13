@@ -25,13 +25,14 @@ class TaskContainer extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
+              color: Colors.black,
               fontSize: 16.0,
               fontWeight: FontWeight.w700,
             ),
           ),
 
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
             child: Text(
               subtitle,
               style: TextStyle(

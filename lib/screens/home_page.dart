@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
     return Text(
       title,
       style: TextStyle(
-        color: Colors.blue.shade300,
+        color: Colors.black,
         fontSize: 20.0,
         fontWeight: FontWeight.w700,
         letterSpacing: 1.2,
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.orangeAccent.shade100,
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -49,8 +49,8 @@ class HomePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Icon(Icons.menu, color: Colors.blue.shade400, size: 30.0),
-                        Icon(Icons.search, color: Colors.blue.shade400, size: 27.0),
+                        Icon(Icons.menu, color: Colors.black, size: 30.0),
+                        Icon(Icons.search, color: Colors.black, size: 27.0),
                       ],
                     ),
                     Padding(
@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           CircularPercentIndicator(
-                            radius: 90.0,
+                            radius: 80.0,
                             lineWidth: 5.0,
                             animation: true,
                             percent: 0.75,
@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                     fontSize: 25.0,
-                                    color: Colors.blue.shade400,
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w800,
                                   ),
                                 ),
@@ -135,6 +135,7 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                           TaskColumn(
+
                             icon: Icons.alarm,
                             iconBackgroundColor: Colors.orange,
                             title: 'To Do',
@@ -182,7 +183,6 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                           SizedBox(height: 20.0, width: 20.0),
-
                         ],
                       ),
                     ),

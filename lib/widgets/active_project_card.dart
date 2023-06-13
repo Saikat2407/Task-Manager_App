@@ -35,9 +35,9 @@ class ActiveProjectsCard extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: CircularPercentIndicator(
                 animation: true,
-                radius: 75.0,
+                radius: 66.0,
                 percent: loadingPercent,
-                lineWidth: 5.0,
+                lineWidth: 7.0,
                 circularStrokeCap: CircularStrokeCap.round,
                 backgroundColor: Colors.white10,
                 progressColor: Colors.black54,

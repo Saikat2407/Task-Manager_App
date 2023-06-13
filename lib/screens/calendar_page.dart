@@ -21,7 +21,7 @@ class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.orange.shade200,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(
@@ -40,6 +40,7 @@ class CalendarPage extends StatelessWidget {
                     Text(
                       'Today',
                       style: TextStyle(
+                        color: Colors.black,
                           fontSize: 30.0, fontWeight: FontWeight.w700),
                     ),
                     Container(
@@ -62,7 +63,7 @@ class CalendarPage extends StatelessWidget {
                           child: Text(
                             'Add task',
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 16),
                           ),
@@ -77,9 +78,9 @@ class CalendarPage extends StatelessWidget {
                   Text(
                     'Productive Day, Saikat',
                     style: TextStyle(
-                      fontSize: 18.0,
-                      color: Colors.grey,
-                      fontWeight: FontWeight.w400,
+                      fontSize: 20.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                 ],
@@ -89,7 +90,7 @@ class CalendarPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'April, 2023',
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20, color: Colors.black),
                 ),
               ),
               SizedBox(height: 20.0),
@@ -152,19 +153,18 @@ class CalendarPage extends StatelessWidget {
                               _dashedText(),
                               TaskContainer(
                                 title: 'Project Research',
-                                subtitle:
-                                'Discuss with the colleagues about the future plan',
-                                boxColor: Colors.yellowAccent,
+                                subtitle: 'Discuss with the colleagues about the future plan',
+                                boxColor: Colors.orangeAccent.shade200,
                               ),
                               _dashedText(),
                               TaskContainer(
                                 title: 'Work on Fitness App',
                                 subtitle: 'Add exercise tab',
-                                boxColor: Colors.brown,
+                                boxColor: Colors.lightBlueAccent.shade100,
                               ),
                               TaskContainer(
                                 title: 'Call',
-                                subtitle: 'Call to Mom',
+                                subtitle: 'Call to Maa',
                                 boxColor: Colors.pinkAccent.shade200,
                               ),
                               TaskContainer(
@@ -188,5 +188,5 @@ class CalendarPage extends StatelessWidget {
     );
   }
 
-  FlatButton({required Null Function() onPressed, required Center child}) {}
+  FlatButton({ required Function() onPressed, required Center child}) {}
 }
