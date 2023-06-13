@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanager/screens/calendar_page.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:taskmanager/widgets/task_column.dart';
 import 'package:taskmanager/widgets/active_project_card.dart';
+import 'package:taskmanager/screens/calendar_page.dart';
+import 'package:taskmanager/widgets/task_column.dart';
 import 'package:taskmanager/widgets/top_container.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,10 +10,11 @@ class HomePage extends StatelessWidget {
     return Text(
       title,
       style: TextStyle(
-          color: Colors.blue.shade300,
-          fontSize: 20.0,
-          fontWeight: FontWeight.w700,
-          letterSpacing: 1.2),
+        color: Colors.blue.shade300,
+        fontSize: 20.0,
+        fontWeight: FontWeight.w700,
+        letterSpacing: 1.2,
+      ),
     );
   }
 
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.green,
       child: Icon(
         Icons.calendar_today,
-        size: 20.0,
+        size: 18.0,
         color: Colors.white,
       ),
     );
@@ -40,21 +41,20 @@ class HomePage extends StatelessWidget {
             TopContainer(
               height: 200,
               width: width,
-              child: Column(
+              padding: EdgeInsets.all(10.0),
+              child: Expanded(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Icon(Icons.menu,
-                            color: Colors.blue.shade400, size: 30.0),
-                        Icon(Icons.search,
-                            color: Colors.blue.shade400, size: 27.0),
+                        Icon(Icons.menu, color: Colors.blue.shade400, size: 30.0),
+                        Icon(Icons.search, color: Colors.blue.shade400, size: 27.0),
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 0, vertical: 0.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -105,7 +105,9 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     )
-                  ]),
+                  ],
+                ),
+              ),
             ),
             Expanded(
               child: SingleChildScrollView(
@@ -113,8 +115,7 @@ class HomePage extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       color: Colors.transparent,
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 20.0, vertical: 10.0),
+                      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                       child: Column(
                         children: <Widget>[
                           Row(
@@ -126,83 +127,61 @@ class HomePage extends StatelessWidget {
                                 onTap: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(
-                                        builder: (context) => CalendarPage()),
+                                    MaterialPageRoute(builder: (context) => CalendarPage()),
                                   );
                                 },
                                 child: calendarIcon(),
                               ),
                             ],
                           ),
-                          SizedBox(height: 15.0),
                           TaskColumn(
                             icon: Icons.alarm,
-                            iconBackgroundColor: Colors.redAccent.shade400,
+                            iconBackgroundColor: Colors.orange,
                             title: 'To Do',
-                            subtitle: '7 tasks now. 2 started',
+                            subtitle: '5 tasks now. 1 started',
                           ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
+                          SizedBox(height: 15.0),
                           TaskColumn(
-                            icon: Icons.blur_circular,
-                            iconBackgroundColor: Colors.yellow.shade400,
+                            icon: Icons.timer,
+                            iconBackgroundColor: Colors.green,
                             title: 'In Progress',
-                            subtitle: '1 tasks now. 1 started',
+                            subtitle: '1 task now. 1 started',
                           ),
                           SizedBox(height: 15.0),
                           TaskColumn(
                             icon: Icons.check_circle_outline,
-                            iconBackgroundColor: Colors.blue.shade400,
+                            iconBackgroundColor: Colors.blue,
                             title: 'Done',
                             subtitle: '18 tasks now. 13 started',
                           ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      color: Colors.transparent,
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 20.0, vertical: 10.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          subheading('Active Projects'),
-                          SizedBox(height: 5.0),
+                          SizedBox(height: 10.0),
                           Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              ActiveProjectsCard(
-                                cardColor: Colors.lightGreen.shade600,
-                                loadingPercent: 0.25,
-                                title: 'Fitness App',
-                                subtitle: '9 hours progress',
-                              ),
-                              SizedBox(width: 20.0),
-                              ActiveProjectsCard(
-                                cardColor: Colors.red.shade300,
-                                loadingPercent: 0.6,
-                                title: 'Making Java Notes',
-                                subtitle: '21 hours progress',
-                              ),
+                              subheading('Active Projects'),
+                              calendarIcon(),
                             ],
                           ),
+                          SizedBox(height: 15.0),
                           Row(
                             children: <Widget>[
                               ActiveProjectsCard(
-                                cardColor: Colors.yellow.shade400,
-                                loadingPercent: 0.45,
-                                title: 'Crypto App',
-                                subtitle: '5 hours progress',
+                                cardColor: Colors.orange.shade400,
+                                loadingPercent: 0.6,
+                                title: 'Medical App',
+                                subtitle: 'Posted 2 days ago',
                               ),
                               SizedBox(width: 20.0),
                               ActiveProjectsCard(
                                 cardColor: Colors.blue.shade400,
-                                loadingPercent: 0.9,
-                                title: 'Online Cloud Course',
-                                subtitle: '23 hours progress',
+                                loadingPercent: 0.8,
+                                title: 'Makeup Products',
+                                subtitle: 'Posted 5 days ago',
                               ),
                             ],
                           ),
+                          SizedBox(height: 20.0),
                         ],
                       ),
                     ),
