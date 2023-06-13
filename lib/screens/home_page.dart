@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -163,7 +163,7 @@ class HomePage extends StatelessWidget {
                               calendarIcon(),
                             ],
                           ),
-                          SizedBox(height: 15.0),
+                          SizedBox(height: 10.0,),
                           Row(
                             children: <Widget>[
                               ActiveProjectsCard(
@@ -181,7 +181,8 @@ class HomePage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(height: 20.0),
+                          SizedBox(height: 20.0, width: 20.0),
+
                         ],
                       ),
                     ),
