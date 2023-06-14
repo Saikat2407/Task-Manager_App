@@ -7,7 +7,6 @@ import 'package:taskmanager/screens/home_page.dart';
 class CreateNewTaskPage extends StatelessWidget {
   get mainAxisAlignment => null;
 
-
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
