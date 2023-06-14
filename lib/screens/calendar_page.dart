@@ -50,17 +50,16 @@ class CalendarPage extends StatelessWidget {
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      child: FlatButton(
-                        onPressed: () {
+                      child: GestureDetector(
+                          onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) => CreateNewTaskPage(),
+                            MaterialPageRoute(builder: (context) => CreateNewTaskPage()
                             ),
                           );
                         },
                         child: Center(
-                          child: Text(
+                          child: const Text(
                             'Add task',
                             style: TextStyle(
                                 color: Colors.black,
@@ -145,7 +144,7 @@ class CalendarPage extends StatelessWidget {
                           width: 20,
                         ),
                         Expanded(
-                          flex: 5,
+                          flex: 6,
                           child: ListView(
                             shrinkWrap: true,
                             physics: NeverScrollableScrollPhysics(),

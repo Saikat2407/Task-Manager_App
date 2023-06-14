@@ -5,6 +5,8 @@ import 'package:taskmanager/widgets/my_text_field.dart';
 import 'package:taskmanager/screens/home_page.dart';
 
 class CreateNewTaskPage extends StatelessWidget {
+  get mainAxisAlignment => null;
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -83,7 +85,7 @@ class CreateNewTaskPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 20),
-                      widget(
+                      CustomWidget(
                         child: MyTextField(
                           label: 'Description',
                           minLines: 3,
@@ -93,7 +95,7 @@ class CreateNewTaskPage extends StatelessWidget {
                       SizedBox(height: 20),
                       Container(
                         alignment: Alignment.topLeft,
-                        child: Column(
+                        child: const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
@@ -142,22 +144,25 @@ class CreateNewTaskPage extends StatelessWidget {
               width: width,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Container(
                     child: Text(
                       'Create Task',
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontWeight: FontWeight.w700,
                           fontSize: 18),
+                      textAlign: TextAlign.center,
                     ),
-                    alignment: Alignment.center,
+                    alignment: Alignment.topCenter,
                     margin: EdgeInsets.fromLTRB(20, 10, 20, 20),
                     width: width - 40,
                     decoration: BoxDecoration(
                       color: Colors.lightBlueAccent,
                       borderRadius: BorderRadius.circular(30),
                     ),
+
                   ),
                 ],
               ),
@@ -168,5 +173,19 @@ class CreateNewTaskPage extends StatelessWidget {
     );
   }
 
-  widget({required MyTextField child}) {}
+  // widget({required MyTextField child}) {}
 }
+
+class CustomWidget extends StatelessWidget {
+  final MyTextField child;
+
+  const CustomWidget({required this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: child,
+    );
+  }
+}
+

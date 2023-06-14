@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               Container(
-                                child: Text(
+                                child: const Text(
                                   'Saikat Nayek',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                               Container(
-                                child: Text(
+                                child:const Text(
                                   'App Developer',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
@@ -164,11 +164,11 @@ class HomePage extends StatelessWidget {
                               calendarIcon(),
                             ],
                           ),
-                          SizedBox(height: 10.0,),
+                          SizedBox(height: 5.0,),
                           Row(
                             children: <Widget>[
                               ActiveProjectsCard(
-                                cardColor: Colors.orange.shade400,
+                                cardColor: Colors.green,
                                 loadingPercent: 0.6,
                                 title: 'Medical App',
                                 subtitle: 'Posted 2 days ago',
@@ -177,8 +177,25 @@ class HomePage extends StatelessWidget {
                               ActiveProjectsCard(
                                 cardColor: Colors.blue.shade400,
                                 loadingPercent: 0.8,
-                                title: 'Makeup Products',
+                                title: 'Tech Products',
                                 subtitle: 'Posted 5 days ago',
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: <Widget>[
+                              ActiveProjectsCard(
+                                cardColor: Colors.purpleAccent.shade200,
+                                loadingPercent: 0.25,
+                                title: 'Smart Contract',
+                                subtitle: 'Posted 1 days ago',
+                              ),
+                              SizedBox(width: 20.0),
+                              ActiveProjectsCard(
+                                cardColor: Colors.brown.shade200,
+                                loadingPercent: 0.92,
+                                title: 'Hackathon Prep',
+                                subtitle: 'Posted 9 days ago',
                               ),
                             ],
                           ),
