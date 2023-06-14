@@ -15,9 +15,19 @@ class CreateNewTaskPage extends StatelessWidget {
       color: Colors.black54,
     );
     return Scaffold(
+      backgroundColor: Colors.orange.shade200,
       body: SafeArea(
         child: Column(
           children: <Widget>[
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: MyBackButton(),
+                ),
+              ],
+            ),
+            SizedBox(height: 10, width: 10),
             TopContainer(
               padding: EdgeInsets.fromLTRB(20, 20, 20, 40),
               width: width,
@@ -63,7 +73,9 @@ class CreateNewTaskPage extends StatelessWidget {
                 ],
               ),
             ),
+
             Expanded(
+              flex: 1,
                 child: SingleChildScrollView(
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Column(
@@ -76,7 +88,7 @@ class CreateNewTaskPage extends StatelessWidget {
                                 label: 'Start Time',
                                 icon: downwardIcon,
                               )),
-                          SizedBox(width: 40),
+                          SizedBox(width: 50),
                           Expanded(
                             child: MyTextField(
                               label: 'End Time',
@@ -117,7 +129,7 @@ class CreateNewTaskPage extends StatelessWidget {
                               children: <Widget>[
                                 Chip(
                                   label: Text("SPORT APP"),
-                                  backgroundColor: Colors.orange,
+                                  backgroundColor: Colors.purpleAccent,
                                   labelStyle: TextStyle(color: Colors.white),
                                 ),
                                 Chip(
@@ -160,7 +172,7 @@ class CreateNewTaskPage extends StatelessWidget {
                     margin: EdgeInsets.fromLTRB(20, 10, 20, 20),
                     width: width - 40,
                     decoration: BoxDecoration(
-                      color: Colors.lightBlueAccent,
+                      color: Colors.deepOrangeAccent,
                       borderRadius: BorderRadius.circular(30),
                     ),
 

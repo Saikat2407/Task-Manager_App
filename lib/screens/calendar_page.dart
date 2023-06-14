@@ -47,7 +47,7 @@ class CalendarPage extends StatelessWidget {
                       height: 40.0,
                       width: 120,
                       decoration: BoxDecoration(
-                        color: Colors.green,
+                        color: Colors.lightGreen,
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: GestureDetector(
