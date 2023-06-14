@@ -35,6 +35,7 @@ class CreateNewTaskPage extends StatelessWidget {
                         'Create new task',
                         style: TextStyle(
                             fontSize: 30.0, fontWeight: FontWeight.w700),
+                        textAlign: TextAlign.center,
                       ),
                     ],
                   ),
@@ -153,9 +154,9 @@ class CreateNewTaskPage extends StatelessWidget {
                           color: Colors.black,
                           fontWeight: FontWeight.w700,
                           fontSize: 18),
-                      textAlign: TextAlign.center,
+                      // textAlign: TextAlign.center,
                     ),
-                    alignment: Alignment.topCenter,
+                    alignment: Alignment.center,
                     margin: EdgeInsets.fromLTRB(20, 10, 20, 20),
                     width: width - 40,
                     decoration: BoxDecoration(
