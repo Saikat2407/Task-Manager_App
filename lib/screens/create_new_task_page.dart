@@ -21,9 +21,11 @@ class CreateNewTaskPage extends StatelessWidget {
           children: <Widget>[
             Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: MyBackButton(),
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(14.0),
+                    child: MyBackButton(),
+                  ),
                 ),
               ],
             ),
@@ -160,7 +162,7 @@ class CreateNewTaskPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    child: Text(
+                    child: const Text(
                       'Create Task',
                       style: TextStyle(
                           color: Colors.black,

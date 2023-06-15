@@ -135,7 +135,6 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                           TaskColumn(
-
                             icon: Icons.alarm,
                             iconBackgroundColor: Colors.orange,
                             title: 'To Do',
@@ -175,7 +174,7 @@ class HomePage extends StatelessWidget {
                               ),
                               SizedBox(width: 20.0),
                               ActiveProjectsCard(
-                                cardColor: Colors.blue.shade400,
+                                cardColor: Colors.blue.shade300,
                                 loadingPercent: 0.8,
                                 title: 'Tech Products',
                                 subtitle: 'Posted 5 days ago',
