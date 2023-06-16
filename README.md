@@ -10,6 +10,7 @@ Task Manager App is simple app that will you to manage your day day task very ea
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
+![Alt text](C:\Saikat Programing Files\taskmanager\App ScreenShot\Home-page view.png)
 
 ## Authors
 
